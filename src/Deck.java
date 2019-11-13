@@ -39,7 +39,6 @@ public class Deck {
                 cards.add(new Card(ranks[j], suitString, values[j]));
             }
             // initialize the size vartiable
-            this.size = cards.size();
             shuffle();
 	} // close constructor
         }
@@ -68,6 +67,7 @@ public class Deck {
 	 */
 	public void shuffle() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
+                this.size = cards.size();
                 Card tempyBoi;
 		for (int k = size() - 1; k > 0; k--) {
                     int pos = (int) (Math.random() * (k + 1));
